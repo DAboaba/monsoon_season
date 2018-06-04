@@ -1,5 +1,5 @@
 # An-Exploration-of-Rainfall-and-Temperature-Trends-during-the-Monsoon-Season-in-India
-
+An Exploratory Analysis of the Monsoon season in several Indian districts in R
 
 ## Task Description 
 The code attached is a practical demonstration of my coding competency. It formed part of my application for a Research position. As part of the application I was asked to work on a large dataset of  partially  cleaned  temperature and  rainfall  readings  from  the  Indian  Meteorological  Department.  The datasets consisted of daily  rainfall  and  temperature  grid  point  data  from 2009-2013. Each grid  point  came  from  a  1◦(latitude)  x  1◦(longitude)  grid  covering  the  Indian  subcontinent. When correctly combined the full rainfall and temperature datasets each had over a million observations across five variables. 
@@ -7,6 +7,7 @@ The code attached is a practical demonstration of my coding competency. It forme
 The assessment was divided into a **CLEANING** and **EXPLORATION** stage. 
 
 ## Cleaning stage
+
 
 **The central task of the cleaning stage was to  collapse  the  grid-level  dataset  into  a  district-level  dataset.**
 
@@ -23,8 +24,8 @@ I was also expected to address the following questions with as much specificity 
 
   1. How  would  your  code  scale  up  with  this  larger  dataset?  
   2. Would you  need  any  additional  computing  resources?  
-
-## Exploration stage
+ 
+## Exploration stage
 
 **The central task of the exploration stage was to use the district-level daily dataset I had just created to document the monsoon season in various districts.**
 
