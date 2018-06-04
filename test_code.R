@@ -1,4 +1,4 @@
-# EPIC STATA TASK .R file
+STATA TASK .R file
 ##  by Damilare Aboaba
 
 # Preparatory steps
