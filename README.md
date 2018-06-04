@@ -8,7 +8,7 @@ _Cleaning stage_
 
 **The central task of the cleaning stage was to  collapse  the  grid-level  dataset  into  a  district-level  dataset.**
 
-I was given an algorithim to match each grid point to a district and expected to operationalize that using a coding language I chose. The algorithm  to  match  each  grid  point  to  a  district  was  as  follows:  
+I was given an algorithim to match each grid point to a district and expected to operationalize that using a coding language of my choosing. The algorithm  to  match  each  grid  point  to  a  district  was  as  follows:  
   
   1. Take  a  weighted  average  of  daily  mean temperature,  daily  mean  rainfall,  and  daily  total  rainfall  for  all        grid  points  within  100  KM  of  each district’s  geographic  center.  
       - The  weights  are  the  inverse  of  the  squared  distance  from  the  district's center.
