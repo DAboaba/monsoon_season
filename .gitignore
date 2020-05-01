@@ -1,6 +1,7 @@
 .Rproj.user
 .Rhistory
 /output
+/input
 .csv
 .rds
 .RData
