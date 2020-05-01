@@ -1,12 +1,3 @@
-STATA TASK .R file
-##  by Damilare Aboaba
-
-# Preparatory steps
-# (1) Download required data and store the temperature, rainfall, and crosswalk data in 3 seperate folders
-# (2) Arrange the files in the temperature and rainfall folders by name in ascending order for instance the temperature folder should have 
-#     the temperature_2009.dta file first, then the temperature 2010.dta file next
-# (3) Load required packages for data cleaning and manipulation
-
 library(haven)   # loading haven package for reading in .dta files
 library(dplyr)   # load the dplyr package which comes with functions specifically made for data manipulation
 library(gmt)     # load the gmt package in order to use geodist() function to calculate distances
@@ -19,47 +10,7 @@ library(sjPlot)  # load the sjPlot package for creating publication-ready tables
 # Question 2:Data Cleaning
 ## Reading in the data
 
-#### Reading in the Crosswalk data
-# (1) Set working directory to the location of the downloaded crosswalk data
-# (2) Using the read_dta() function I read in the crosswalk data into a data frame called Crosswalk
-
-Crosswalk <- read_dta("district_crosswalk_small.dta")
-
-#### Reading in the Temperature data
-# (1) Set working directory to the location of the downloaded temperature data
-# (2) Using the read_dta() function I read in the temperature_2009 through temperature_2013 data
-# (3) Using the rbind() function I bind the different data together
-
-# Assuming data for different years is kept in seperate files, if (1) they are all in the correct working
-# directory and (2) they are all arranged appropriately, using the number of the files as an index, this for loop 
-  #(1) reads in the data for the first year into an appropriately named data frame
-  #(2) binds or stacks the data for successive years by row
-# This results in a data frame where data for 2009 comes first, then 2010 second, etc.
-
-for( i in 1:length(list.files())){
-  if (i == 1){
-    Temperature <- read_dta(list.files()[i])
-  }else{
-    Temperature <- rbind(Temperature,read_dta(list.files()[i]))
-  }
-}
-
-####Reading in the Rainfall data
-# (1) Set working directory to the location of the downloaded temperature data
-# (2) Using the read_dta() function I read in the district_crosswalk data and rainfall_2009 through rainfall_2013 data
-# (3) Using the rbind() function I bind the different data together
-
-# The explanation for this for loop is the same as for temperature (lines 31 to 35).
-
-for( i in 1:length(list.files())){
-  if (i == 1){
-    Rainfall <- read_dta(list.files()[i])
-  }else{
-    Rainfall <- rbind(Rainfall,read_dta(list.files()[i]))
-  }
-}
-
-
+#####
 ## Data Manipulation
 # (1) I remove unnecessary variables from crosswalk by using the select() function to select only necessary variables
 Crosswalk <- select(Crosswalk, stname_iaa, distname_iaa, xaxis, yaxis)
