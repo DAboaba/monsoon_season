@@ -2,7 +2,7 @@
 pacman::p_load(here, yaml, haven, dplyr, feather, renv)
 
 # restore the project's local library state from renv.lock
-renv::restore()
+renv::restore(confirm = FALSE)
 
 # specify task directory
 task_dir <- here("read_merge_raw_data")
