@@ -29,12 +29,12 @@ rain_temp <- full_join(rain, temp, by = task_config$columns_to_join_by)
 # since all rows of rain have a corresponding row in temp, the result of this join should have the same number of observations as both the rain and temp datasets
 stopifnot(nrow(rain_temp) == nrow(rain), nrow(rain_temp) == nrow(temp))
 
-#delete redundant objects
-rm(rain, temp)
-
 # write results of task to appropriate directory
 feather::write_feather(rain_temp, file.path(task_output_dir, "rain_temp.feather"))
 feather::write_feather(crosswalk, file.path(task_output_dir, "crosswalk.feather"))
+
+#delete unnecessary objects
+rm(rain, temp, rain_temp, crosswalk)
 
 # symlink input directory of clean_data task to output directory 
 file.symlink(from = task_output_dir, to = file.path(here(task_config$next_task), "input"))
