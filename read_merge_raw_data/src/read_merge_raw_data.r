@@ -1,5 +1,5 @@
 # load necessary packages for task
-pacman::p_load(here, yaml, haven, dplyr, feather, renv)
+pacman::p_load(here, yaml, haven, dplyr, feather, renv, magrittr)
 
 # restore the project's local library state from renv.lock
 renv::restore(confirm = FALSE)

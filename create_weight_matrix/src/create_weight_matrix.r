@@ -42,7 +42,8 @@ dist_logical <- dist <= 100
 weight <- (dist_logical/dist)^2 
 
 # write results of task to appropriate directory
-write_rds(dist, file.path(task_output_dir, "dist.rds"))
+feather::write_feather(rain_temp, file.path(task_output_dir, "rain_temp.feather"))
+feather::write_feather(crosswalk, file.path(task_output_dir, "crosswalk.feather"))
 write_rds(weight, file.path(task_output_dir, "weights.rds"))
 
 #delete uneccessary objects
