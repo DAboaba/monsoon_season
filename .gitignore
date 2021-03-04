@@ -1,8 +1,12 @@
 .Rproj.user
 .Rhistory
-/output
+*/output
 /input
 .csv
 .rds
 .RData
 .Ruserdata
+.Rprofile
+.DS_Store
+renv/
+.pre-commit-config.yaml

@@ -1,8 +1,11 @@
-columns_to_join_by :
-- day
-- month
-- year
-- latitude
-- longitude
+---
+crosswalk_raw_path: raw_data/district_crosswalk_small.dta
 
-next_task : create_weight_matrix
+raw_data_dir: raw_data
+
+columns_to_join_by:
+    - day
+    - month
+    - year
+    - latitude
+    - longitude
