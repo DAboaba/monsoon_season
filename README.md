@@ -1,7 +1,6 @@
 # Rainfall and Temperature Trends during India's Monsoon Season
 
-The code in this repository formed part of my application for a research position. I was asked to clean and explore a partially
-cleaned large dataset, millions of observations across five variables, from  the  Indian  Meteorological  Department. The individual
+The code in this repository formed part of an exercise in exploring meteorological daa. I cleaned and explored a large dataset, millions of observations across five variables, from  the  [Indian  Meteorological  Department](https://mausam.imd.gov.in). The individual
 datasets making up the larger dataset contained grid-point data on daily  rainfall/temperature from 2009-2013. Each grid  point
 came  from  a  1◦(latitude)  by  1◦(longitude)  grid  covering  the  Indian subcontinent. 
 
@@ -9,8 +8,7 @@ came  from  a  1◦(latitude)  by  1◦(longitude)  grid  covering  the  Indian 
 
 **The primary sub-task of the data cleaning step involved collapsing the grid-level dataset into a district-level dataset.**
 
-I was given an algorithim to match each grid point to a district and expected to operationalize that using my chosen coding
-language. The algorithm  to  match  each  grid  point  to  a  district  was  as  follows:  
+I implemented an algorithim to match each grid point to a district. The algorithm  to  match  each  grid  point  to  a  district  was  as  follows:  
   
   1. Take  a  weighted  average  of  daily  mean temperature,  daily  mean  rainfall,  and  daily  total  rainfall  for  all  grid  points  within  100  KM  of  each district’s  geographic  center.  
       - The  weights  are  the  inverse  of  the  squared  distance  from  the  district's center.
