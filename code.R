@@ -1,6 +1,3 @@
-STATA TASK .R file
-##  by Damilare Aboaba
-
 # Preparatory steps
 # (1) Download required data and store the temperature, rainfall, and crosswalk data in 3 seperate folders
 # (2) Arrange the files in the temperature and rainfall folders by name in ascending order for instance the temperature folder should have 
@@ -131,9 +128,6 @@ Weight_matrix <- Dist_matrix <= 100 #I save this matrix in a container called we
 #    it gives the correct weight as detailed in the stata instructions. Grid points within a 100km have a weight that is the inverse of their 
 #    squared distance, and grid points outside this distance have a weight of 0.
 Weight_matrix <- (Weight_matrix/Dist_matrix)^2 #create weight matrix by dividing each element of matrix with square of corresponding element in the distance matrix 
-
-# (4) To save computing power and clean my workspace I delete the excess data
-rm(Dist_matrix)
 
 ## Creating Matrices to hold measures of average and total rainfall
 # (1) I create matrices to hold measures of average and total rainfall
